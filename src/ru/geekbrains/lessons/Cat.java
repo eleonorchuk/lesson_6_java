@@ -6,4 +6,14 @@ public class Cat extends Animal{
         super(name);
         System.out.println("Кошку " + name + " создали");
     }
+
+    @Override
+    public int runLengthLimit() {
+        return 200;
+    }
+
+    @Override
+    public int sweemLengthLimit() {
+        return 0;
+    }
 }
