@@ -3,10 +3,12 @@ package ru.geekbrains.lessons;
 public class Animal {
     private String nameAnimal;
 
+    private static int numberOfAnimals = 0;
     Animal(String name)
     {
         nameAnimal = name;
-        System.out.println("Животное " + nameAnimal + " создали");
+        numberOfAnimals++;
+        System.out.println("Животное " + nameAnimal + " создали " + numberOfAnimals + " животное");
     }
 
     public void run(int length)
@@ -29,5 +31,9 @@ public class Animal {
 
     public int sweemLengthLimit() {
         return 0;
+    }
+
+    public static int numOfAnimals() {
+        return numberOfAnimals;
     }
 }

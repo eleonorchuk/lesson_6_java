@@ -1,10 +1,12 @@
 package ru.geekbrains.lessons;
 
 public class Cat extends Animal{
+    private static int numberOfCats = 0;
     Cat(String name)
     {
         super(name);
-        System.out.println("Кошку " + name + " создали");
+        numberOfCats++;
+        System.out.println("Кошку " + name + " создали " + numberOfCats);
     }
 
     @Override
@@ -15,5 +17,9 @@ public class Cat extends Animal{
     @Override
     public int sweemLengthLimit() {
         return 0;
+    }
+
+    public static int numOfAnimals() {
+        return numberOfCats;
     }
 }
